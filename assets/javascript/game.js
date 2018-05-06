@@ -8,22 +8,23 @@ var lose = 0;
 var remains = 10;
 var letter = [];
 
-function loop() {
-    for (var i = 0; i < letter.length; i++) {
-        document.getElementById("myLetters").textContent = ((i+1) + ": " + letter[i]);
-    }
-}
+
 
 document.onkeyup = function (event) {
     var press = event.key;
     var big = press.toUpperCase();
-
-    
+    letter.push(big);
+    function loop() {
+        for (var i = 0; i < letter.length; i++) {
+            
+            document.getElementById("myLetters").textContent = ((i + 1) + ": " + letter[i]);
+        }
+    }
 
     loop();
     document.getElementById("guess").textContent = big;
-    letter.push(big);
-    console.log(letter);
+    
+    
 
     if (big == secretLetter) {
         alert("Congratulations! You got it right!");
