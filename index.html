@@ -19,40 +19,31 @@
     <div class="container">
         <h1>Guess which letter I am thinking of!</h1>
         <section class="jumbotron">
-            <div>
-                <h2 id="key">You guessed: </h2>
+            <div class="row">
+                <h2 id="key" class="col-md-4">You guessed:
+                    <h2 id="guess" class="col-md-2"></h2>
+                </h2>
             </div>
-            <div>
-                <h2 id="wins">Number of wins: </h2>
+            <div class="row">
+                <h2 id="guesses" class="col-md-8">Number of guesses remaining: </h2>
+                <h2 id="remaining" class="col-md-2">10</h2>
             </div>
-            <div>
-                <h2 id="losses">Number of losses: </h2>
+            <div class="row">
+                <h2 id="wins" class="col-md-4">Number of wins: </h2>
+                <h2 id="won" class="col-md-2">0</h2>
             </div>
-            <div>
-                <h2 id="guesses">Number of guesses remaining: </h2>
+            <div class="row">
+                <h2 id="losses" class="col-md-4">Number of losses: </h2>
+                <h2 id="lost" class="col-md-2">0</h2>
             </div>
-            <div>
-                <h2 id="letters">Letters guessed so far: </h2>
+            <div class="row">
+                <h2 id="letters" class="col-md-4">Letters guessed so far: </h2>
+                <h2 id="myLetters" class="col-md-2"></h2>
             </div>
 
         </section>
     </div>
 
-    <script>
-        //generate a random letter
-
-        var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
-            "T", "U", "V", "W", "X", "Y", "Z"
-        ];
-        var secretLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-        
-        document.onkeyup = function(event) {
-            var press = event.key;
-            document.getElementById("key").innerHTML = press;
-        }
-        
-
-    </script>
 </body>
 
 </html>
